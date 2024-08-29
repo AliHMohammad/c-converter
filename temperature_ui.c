@@ -2,7 +2,7 @@
 #include <string.h>
 
 void display_temperature_menu() {
-    printf("f) Celcius to Fahrenheit\n");
+    printf("\nf) Celcius to Fahrenheit\n");
     printf("c) Fahrenheit to Celcius\n");
     printf("k) Celcius to Kelvin\n");
     printf("x) Back\n");

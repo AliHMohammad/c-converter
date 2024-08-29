@@ -7,7 +7,7 @@ void display_intro() {
 }
 
 void display_types() {
-    printf("t) Temperature\n");
+    printf("\nt) Temperature\n");
     printf("d) Distance\n");
     printf("w) Weight\n");
     printf("x) Exit\n");

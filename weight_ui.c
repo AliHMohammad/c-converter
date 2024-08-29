@@ -2,7 +2,7 @@
 #include <string.h>
 
 void display_weight_menu() {
-    printf("p) Kilogram to Pounds\n");
+    printf("\np) Kilogram to Pounds\n");
     printf("k) Pounds to Kilogram\n");
     printf("o) Gram to Ounces\n");
     printf("x) Back\n");

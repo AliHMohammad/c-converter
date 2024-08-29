@@ -14,8 +14,6 @@ int temperature_main() {
 
         get_temperature_choice(choice);
 
-        printf("%s\n", choice);
-
         if (strcmp(choice, "exit") == 0) 
             break;
 

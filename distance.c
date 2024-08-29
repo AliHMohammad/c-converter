@@ -14,8 +14,6 @@ int distance_main() {
 
         get_distance_choice(choice);
 
-        printf("%s\n", choice);
-
         if (strcmp(choice, "exit") == 0) 
             break;
 

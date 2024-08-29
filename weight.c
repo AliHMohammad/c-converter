@@ -14,8 +14,6 @@ int weight_main() {
 
         get_weight_choice(choice);
 
-        printf("%s\n", choice);
-
         if (strcmp(choice, "exit") == 0) 
             break;
 

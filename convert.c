@@ -16,8 +16,6 @@ int main() {
 
         get_type(type);
 
-        printf("%s\n", type);
-
         if (strcmp(type, "exit") == 0) 
             break;
 

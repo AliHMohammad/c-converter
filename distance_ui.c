@@ -2,7 +2,7 @@
 #include <string.h>
 
 void display_distance_menu() {
-    printf("k) Miles to Kilometer\n");
+    printf("\nk) Miles to Kilometer\n");
     printf("m) Kilometer to Miles\n");
     printf("i) Centimeter to inches\n");
     printf("x) Back\n");
