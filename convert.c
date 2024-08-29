@@ -4,6 +4,7 @@
 #include "convert.h"
 #include "distance.h"
 #include "temperature.h"
+#include "weight.h"
 
 int main() {
     display_intro();
@@ -32,7 +33,8 @@ void convert(char *str) {
         distance_main();
     } else if (strcmp(str, "Temperature") == 0) {
         temperature_main();
+    } else if (strcmp(str, "Weight") == 0) {
+        weight_main();
     }
-    //TODO: tredje og sidste option.
 }
 

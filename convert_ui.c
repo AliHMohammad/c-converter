@@ -9,6 +9,7 @@ void display_intro() {
 void display_types() {
     printf("t) Temperature\n");
     printf("d) Distance\n");
+    printf("w) Weight\n");
     printf("x) Exit\n");
 }
 
@@ -24,6 +25,9 @@ void get_type(char *s) {
         break;
     case 'd':
         strcpy(s, "Distance");
+        break;
+    case 'w':
+        strcpy(s, "Weight");
         break;
     case 'x':
         strcpy(s, "exit");
