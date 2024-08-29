@@ -26,6 +26,9 @@ int temperature_main() {
         } else if (strcmp(choice, "Fahrenheit") == 0) {
             float cel = fahrenheit_to_celcius(value);
             printf("%.2f fahrenheit er %.2f grader celcius\n", value, cel);
+        } else if (strcmp(choice, "Kelvin") == 0) {
+            float kel = celcius_to_kelvin(value);
+            printf("%.2f grader celcius er %.2f kelvin\n", value, kel);
         }
 
     }
@@ -39,5 +42,9 @@ float fahrenheit_to_celcius(float fahrenheit) {
 
 float celcius_to_fahrenheit(float celcius) {
     return (celcius * 9.0 / 5) + 32;
+}
+
+float celcius_to_kelvin(float celcius) {
+    return celcius + 273.15;
 }
 

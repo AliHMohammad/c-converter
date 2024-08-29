@@ -4,6 +4,7 @@
 void display_temperature_menu() {
     printf("f) Celcius to Fahrenheit\n");
     printf("c) Fahrenheit to Celcius\n");
+    printf("k) Celcius to Kelvin\n");
     printf("x) Back\n");
 }
 
@@ -20,6 +21,9 @@ void get_temperature_choice(char *s) {
     case 'c':
         strcpy(s, "Fahrenheit");
         break;
+    case 'k':
+        strcpy(s, "Kelvin");
+        break;
     case 'x':
         strcpy(s, "exit");
         break;
@@ -30,7 +34,12 @@ void get_temperature_choice(char *s) {
 }
 
 float get_temperature_value(const char* type) {
-    printf("Indtast temperatur i %s: ", type);
+    if (strcmp(type, "Kelvin") == 0) {
+        printf("Indtast temperatur i Celcius: ");
+    } else {
+        printf("Indtast temperatur i %s: ", type);
+    }
+    
     float value;
     scanf("%f", &value);
     return value;
