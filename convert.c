@@ -1,8 +1,9 @@
 #include <stdio.h>
 #include <string.h>
 
-#include "temperature.h"
 #include "convert.h"
+#include "distance.h"
+#include "temperature.h"
 
 int main() {
     display_intro();
@@ -28,7 +29,7 @@ int main() {
 
 void convert(char *str) {
     if (strcmp(str, "Distance") == 0) {
-        //TODO: Skal lave hele distance converting. Husk at importere .h øverst her
+        distance_main();
     } else if (strcmp(str, "Temperature") == 0) {
         temperature_main();
     }

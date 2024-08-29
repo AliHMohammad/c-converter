@@ -10,16 +10,16 @@ int temperature_main() {
         char choice[256];
         float value;
 
-        display_menu();
+        display_temperature_menu();
 
-        get_choice(choice);
+        get_temperature_choice(choice);
 
         printf("%s\n", choice);
 
         if (strcmp(choice, "exit") == 0) 
             break;
 
-        value = get_value(choice);
+        value = get_temperature_value(choice);
         if (strcmp(choice, "Celcius") == 0) {
             float fahr = celcius_to_fahrenheit(value);
             printf("%.2f grader celcius er %.2f fahrenheit\n", value, fahr);

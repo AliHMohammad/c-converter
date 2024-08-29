@@ -1,13 +1,13 @@
 #include<stdio.h>
 #include <string.h>
 
-void display_menu() {
+void display_temperature_menu() {
     printf("f) Celcius to Fahrenheit\n");
     printf("c) Fahrenheit to Celcius\n");
     printf("x) Back\n");
 }
 
-void get_choice(char *s) {
+void get_temperature_choice(char *s) {
 
     char input;
     scanf("%c", &input);
@@ -24,12 +24,12 @@ void get_choice(char *s) {
         strcpy(s, "exit");
         break;
     default:
-        get_choice(s);
+        get_temperature_choice(s);
         break;
     }
 }
 
-float get_value(const char* type) {
+float get_temperature_value(const char* type) {
     printf("Indtast temperatur i %s: ", type);
     float value;
     scanf("%f", &value);
