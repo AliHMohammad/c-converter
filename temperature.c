@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include <string.h>
 // Vi inkluderer vores eget bibliotek
 #include "temperature.h"
 
@@ -10,20 +11,29 @@ int main() {
 
     while (1)
     {
+        char choice[256];
+        float value;
+
         display_menu();
 
-        char choice = get_choice();
+        get_choice(choice);
 
-        if (choice == 'x')
+        printf("%s\n", choice);
+
+        if (strcmp(choice, "exit") == 0) 
             break;
 
-        float fahr = get_value();
+        value = get_value(choice);
+        if (strcmp(choice, "Celcius") == 0) {
+            float fahr = celcius_to_fahrenheit(value);
+            printf("%.2f grader celcius er %.2f fahrenheit\n", value, fahr);
+        } else if (strcmp(choice, "Fahrenheit") == 0) {
+            float cel = fahrenheit_to_celcius(value);
+            printf("%.2f fahrenheit er %.2f grader celcius\n", value, cel);
+        }
 
-        float cel = fahrenheit_to_celcius(fahr);
-        printf("%.2f fahrenheit er %.2f grader celcius\n", fahr, cel);
     }
     
-
     return 0;
 }
 
@@ -34,7 +44,4 @@ float fahrenheit_to_celcius(float fahrenheit) {
 float celcius_to_fahrenheit(float celcius) {
     return (celcius * 9.0 / 5) + 32;
 }
-
-
-
 

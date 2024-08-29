@@ -1,5 +1,5 @@
 void display_menu();
 float fahrenheit_to_celcius(float fahrenheit);
 float celcius_to_fahrenheit(float celcius);
-char get_choice();
-float get_value();
+void get_choice(char *s);
+float get_value(const char* str);

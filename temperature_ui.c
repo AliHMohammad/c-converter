@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include <string.h>
 
 void display_menu() {
     printf("f) Celcius to Fahrenheit\n");
@@ -6,15 +7,30 @@ void display_menu() {
     printf("x) Exit\n");
 }
 
-char get_choice() {
-    //TODO: brug en switch case her. Den skal returnere en string (f.eks. f => fahrenheit)
-    char choice;
-    scanf("%c", &choice);
-    return choice;
+void get_choice(char *s) {
+
+    char input;
+    scanf("%c", &input);
+
+    switch (input)
+    {
+    case 'f':
+        strcpy(s, "Celcius");
+        break;
+    case 'c':
+        strcpy(s, "Fahrenheit");
+        break;
+    case 'x':
+        strcpy(s, "exit");
+        break;
+    default:
+        get_choice(s);
+        break;
+    }
 }
-//TODO: Skal tage i mod type (string)
-float get_value() {
-    // printf("Indtast temperatur i %s", type)
+
+float get_value(const char* type) {
+    printf("Indtast temperatur i %s: ", type);
     float value;
     scanf("%f", &value);
     return value;
