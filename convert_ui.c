@@ -2,7 +2,7 @@
 #include <string.h>
 
 void display_intro() {
-    printf("Velkommen til min converter!\n");
+    printf("Velkommen til Alis converter!\n");
     printf("==========================\n");
 }
 

@@ -4,6 +4,7 @@
 void display_distance_menu() {
     printf("k) Miles to Kilometer\n");
     printf("m) Kilometer to Miles\n");
+    printf("i) Centimeter to inches\n");
     printf("x) Back\n");
 }
 
@@ -19,6 +20,9 @@ void get_distance_choice(char *s) {
         break;
     case 'm':
         strcpy(s, "Kilometer");
+        break;
+    case 'i':
+        strcpy(s, "Centimeter");
         break;
     case 'x':
         strcpy(s, "exit");

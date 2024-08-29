@@ -26,6 +26,9 @@ int distance_main() {
         } else if (strcmp(choice, "Kilometer") == 0) {
             float miles = kilometer_to_miles(value);
             printf("%.2f kilometer er %.2f miles\n", value, miles);
+        } else if (strcmp(choice, "Centimeter") == 0) {
+            float inches = centimeter_to_inches(value);
+            printf("%.2f centimeter er %.2f inches\n", value, inches);
         }
 
     }
@@ -34,12 +37,15 @@ int distance_main() {
 }
 
 float miles_to_kilometer(float miles) {
-    float kilometer = miles * 1.609344;
-    return kilometer;
+    return miles * 1.609344;
+    
 }
 
 float kilometer_to_miles(float kilometer) {
-    float miles = kilometer / 1.609344;
-    return miles;
+    return kilometer / 1.609344;
+}
+
+float centimeter_to_inches(float centimeter) {
+    return centimeter / 2.54;
 }
 
