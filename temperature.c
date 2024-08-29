@@ -3,11 +3,7 @@
 // Vi inkluderer vores eget bibliotek
 #include "temperature.h"
 
-
-
-int main() {
-    printf("Velkommen til min converter!\n");
-    printf("==========================\n");
+int temperature_main() {
 
     while (1)
     {

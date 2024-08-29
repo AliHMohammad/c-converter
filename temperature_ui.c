@@ -4,7 +4,7 @@
 void display_menu() {
     printf("f) Celcius to Fahrenheit\n");
     printf("c) Fahrenheit to Celcius\n");
-    printf("x) Exit\n");
+    printf("x) Back\n");
 }
 
 void get_choice(char *s) {
