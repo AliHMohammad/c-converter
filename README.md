@@ -11,14 +11,14 @@ Koden er blevet kompileret og testet på en Windows 11 maskine med AMD CPU vha. 
 
 Kør nedenstående linje for at kompilere koden:
 
-```
-gcc -Wall temperature.c temperature_ui.c convert.c convert_ui.c distance.c distance_ui.c weight.c weight_ui.c -o temperature.exe
+```sh
+gcc -Wall ./src/*.c -o ./build/temperature.exe
 ```
 
 Dernæst skal du køre den nyoprettet `.exe` fil med:
 
-```
-./temperature.exe
+```sh
+./build/temperature.exe
 ```
 
 
